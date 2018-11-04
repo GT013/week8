@@ -3,24 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Collections;
 namespace week8
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-            string[][] md1 = new string[2][];
-            md1[0] = new string[] { "Sunday", "Monday", "Tyesday", "Wendsday", "Thursday", "Friday", "Saterday" };
-            md1[1] = new string[] { "Jan", "Feb", "Mar", "April", "May", "June",
-                "July", "August", "Sep", "Oc", "November", "December" };
-
-            for (int i = 0; i < md1.GetLength(0); ++i)
+            ArrayList list = new ArrayList();
+            Console.WriteLine("Create a list");
+            Console.WriteLine("List capacity = {0,2}", list.Capacity);
+            for (int i = 0; i < 100; i++)
             {
-               
-
+                Console.Write("Add int to list : {0,2} => ", i);
+                list.Add(i);
+                Console.WriteLine("List count =  {0,3}, capacity = {1,3}  ",
+    list.Count, list.Capacity);
             }
+            Console.WriteLine("-----------------------");
+            for (int i = 0; i < 100; i++)
+            {
+                Console.Write("Remove int from list : {0,2} => ", i);
+                list.Remove(i);
+                Console.WriteLine("List count =  {0,3}, capacity = {1,3}  ",
+    list.Count, list.Capacity);
+            }
+            Console.ReadLine();
 
         }
     }
