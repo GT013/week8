@@ -10,29 +10,29 @@ namespace week8
     {
         static void Main(string[] args)
         {
-            int[] data = new int[10];
-            data[0] = 0;
-            data[1] = 1;
-            data[2] = 2;
-            data[3] = 3;
-            data[4] = 4;
-            data[5] = 5;
-            data[6] = 6;
-            data[7] = 7;
-            data[8] = 8;
-            data[9] = 9;
-            
-            Console.WriteLine(data[0]);
-            Console.WriteLine(data[1]);
-            Console.WriteLine(data[2]);
-            Console.WriteLine(data[3]);
-            Console.WriteLine(data[4]);
-            Console.WriteLine(data[5]);
-            Console.WriteLine(data[6]);
-            Console.WriteLine(data[7]);
-            Console.WriteLine(data[8]);
-            Console.WriteLine(data[9]);
-           
+            int[][] jagged = new int[7][];
+            int count = 0;
+            for (int row = 0; row < jagged.GetLength(0); ++row)
+            {
+                Console.Write("\nRow {0}:", row);
+                jagged[row] = new int[row + 1];
+                for (int index = 0; index < row + 1; ++index)
+                {
+                    ++count;
+                    jagged[row][index] = count;
+                    Console.Write(" {0}", count);
+                }
+            }
+            Console.WriteLine("\n\nTotals");
+            for (int row = 0; row < jagged.GetLength(0); ++row)
+            {
+                int total = 0;
+                for (int index = 0; index < jagged[row].GetLength(0); ++index)
+                {
+                    total += jagged[row][index];
+                }
+                Console.Write("\nRow {0}: {1}", row, total);
+            }
             Console.ReadLine();
 
         }
