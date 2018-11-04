@@ -13,14 +13,20 @@ namespace week8
             string[] month = { "January", "February", "March", "April", "May", "June",
                                "July", "August", "September", "October", "November", "Desember" };
 
-            string value1 = Array.Find(month, m => m.Length<=3);
-            string value2 = Array.Find(month, m => m.Length > 10);
-            string[] value3 = Array.FindAll(month, m => m.StartsWith("J", StringComparison.Ordinal));
-
-            Console.WriteLine(value1);
-            Console.WriteLine(value2);
-            Console.WriteLine(string.Join(",", value3));
-
+            var sortDescending = from mo in month
+                                 orderby mo descending
+                                 select mo;
+            var sortAscen = from moo in month orderby moo select moo;
+            Console.WriteLine("================Descending================");
+            foreach(string m in sortDescending)
+            {
+                Console.WriteLine(m);
+            }
+            Console.WriteLine("================Ascending================");
+            foreach (string m in sortAscen)
+            {
+                Console.WriteLine(m);
+            }
         }
     }
 }
