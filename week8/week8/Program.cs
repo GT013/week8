@@ -10,29 +10,35 @@ namespace week8
     {
         static void Main(string[] args)
         {
-            int[] data = new int[10];
-            data[0] = 0;
-            data[1] = 1;
-            data[2] = 2;
-            data[3] = 3;
-            data[4] = 4;
-            data[5] = 5;
-            data[6] = 6;
-            data[7] = 7;
-            data[8] = 8;
-            data[9] = 9;
-            
-            Console.WriteLine(data[0]);
-            Console.WriteLine(data[1]);
-            Console.WriteLine(data[2]);
-            Console.WriteLine(data[3]);
-            Console.WriteLine(data[4]);
-            Console.WriteLine(data[5]);
-            Console.WriteLine(data[6]);
-            Console.WriteLine(data[7]);
-            Console.WriteLine(data[8]);
-            Console.WriteLine(data[9]);
-           
+            string[] array1 = { "cat", "dog", "carrot", "bird" };
+
+            //
+            // ค้นหาสมาชิกตัวแรกที่มีค่าตามกำหนด 
+            //
+            string value1 = Array.Find(array1,
+              element => element.StartsWith("car",
+              StringComparison.Ordinal));
+
+            string value2 = Array.Find(array1,
+              element => element.StartsWith("fish",
+              StringComparison.Ordinal));
+
+            //
+            // ค้นหาสมาชิกตัวแรกที่มีความยาว string ตามกำหนด
+            //
+            string value3 = Array.Find(array1,
+                element => element.Length == 3);
+
+            //
+            // ค้นหา string ที่มีความยาวไม่เกินค่าที่กำหนด
+            //
+            string[] array2 = Array.FindAll(array1,
+                element => element.Length <= 4);
+
+            Console.WriteLine(value1);
+            Console.WriteLine(value2);
+            Console.WriteLine(value3);
+            Console.WriteLine(string.Join(",", array2));
             Console.ReadLine();
 
         }
