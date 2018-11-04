@@ -8,8 +8,8 @@ namespace week8
 {
     class Program
     {
-        static string[] Names = new string[]
-        {
+        public static string[] Names = new string[]
+         {
         "Afghanistan",
         "Albania",
         "Algeria",
@@ -250,16 +250,24 @@ namespace week8
         "Zambia",
         "Zimbabwe",
 
-        };
+         };
         static void Main(string[] args)
         {
-            string[] value1 = Array.FindAll(Names, c => c.EndsWith("land", StringComparison.Ordinal));
 
-            Console.WriteLine(string.Join(",", value1));
-            Console.WriteLine("-------------------------------------------------------------------------");
-            string[] value2 = Array.FindAll(Names, c => c.EndsWith("stan", StringComparison.Ordinal));
-            Console.WriteLine(string.Join(",", value2));
+            var sortAsc = from names in Names orderby names select names;
+            var sortDe = from name in Names orderby name descending select name;
 
+
+            Console.WriteLine("=============================Descending================================");
+            foreach (string n in sortDe)
+            {
+                Console.WriteLine(n);
+            }
+            Console.WriteLine("=======================Ascending=======================================");
+            foreach (string na in sortAsc)
+            {
+                Console.WriteLine(na);
+            }
         }
 
     }
