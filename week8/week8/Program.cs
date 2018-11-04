@@ -253,13 +253,18 @@ namespace week8
         };
         static void Main(string[] args)
         {
+            string[] land = new string[50];
+            string[] stan = new string[40];
+
             string[] value1 = Array.FindAll(Names, c => c.EndsWith("land", StringComparison.Ordinal));
 
-            Console.WriteLine(string.Join(",", value1));
-            Console.WriteLine("-------------------------------------------------------------------------");
             string[] value2 = Array.FindAll(Names, c => c.EndsWith("stan", StringComparison.Ordinal));
-            Console.WriteLine(string.Join(",", value2));
 
+            Array.Copy(value1, land, value1.Length);
+            Console.WriteLine(string.Join(" ",land));
+            Console.WriteLine("-------------------------------------------------------------------------");
+            Array.Copy(value2, stan, value2.Length);
+            Console.WriteLine(string.Join(" ",stan));
         }
 
     }
