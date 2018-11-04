@@ -10,25 +10,37 @@ namespace week8
     {
         static void Main(string[] args)
         {
-            ArrayList list1 = new ArrayList();
-            list1.Add(10);
-            list1.Add(20);
-            list1.Add(30);
-            list1.Add(40);
-            for (int i = 0; i < list1.Count; i++)
-            {
-                Console.WriteLine(list1[i]);
-            }
-            ArrayList list2 = new ArrayList(list1);
-            list2[0] = 77;
-            list2[1] = 55;
-            list2[2] = 66;
+            string t;
+            Dictionary<string, string> d1 = new Dictionary<string, string>();
+
+            Console.Write("Type File = ");
+            t = Console.ReadLine();
+            d1.Add("txt", "Notepad.exe");
+            d1.Add("bmp", "paint.exe");
+            d1.Add("rtf", "wordpad.exe");
+            d1.Add("pdf", "acrobat.exe");
             
-            for (int i = 0; i < list2.Count; i++)
+          
+            if (t=="pdf")
             {
-                Console.WriteLine(list2[i]);
+                Console.WriteLine(d1["pdf"]);
             }
-            Console.ReadLine();
+            else if (t=="txt")
+            {
+                Console.WriteLine(d1["txt"]);
+            }
+            else if (t=="bmp")
+            {
+                Console.WriteLine(d1["bmp"]);
+            }
+            else if (t == "rtf")
+            {
+                Console.WriteLine(d1["rtf"]);
+            }
+            else
+            {
+                Console.WriteLine("No Program!!!");
+            }
 
         }
     }
