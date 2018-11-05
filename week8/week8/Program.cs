@@ -10,32 +10,15 @@ namespace week8
     {
         static void Main(string[] args)
         {
-           
-            Hashtable name = new Hashtable();
-           
-            name.Add("60030049", "Nantikan Tippawan");
-            name.Add("60030007", "Kasina");
-            name.Add("60030037", "Thanapol");
-            name.Add("60030029", "Natthapat");
-            name.Add("60030014", "Jarudet");
-            name.Add("60030031", "Thanakamon");
-            name.Add("60030098", "Sittinon");
-            name.Add("60030015", "Jinnapat");
-            name.Add("60030112", "Avirut");
-            name.Add("60030016", "Jirawat");
-            name.Add("60030089", "Sarun");
-            name.Add("60030041", "Thanakorn");
 
+            Hashtable p = new Hashtable();
+            p.Add("61110", "Uthaithani");
+            p.Add("72000", "suphan");
+            p.Add("81000", "Kabee");
 
-            Console.WriteLine("---- Computer Class ----");
-            foreach (DictionaryEntry day in name)
-            {
-                Console.WriteLine(day.Key + "   -   " + day.Value);
-            }
-            Console.WriteLine("---------------ID Student-----------");
-
-            Console.WriteLine(" "+name.ContainsKey(Console.ReadLine()));
-
+            Console.WriteLine("pls input num: ");
+            Console.WriteLine("" + p.ContainsKey(Console.ReadLine()));
+            Console.ReadLine();
         }
     }
 }
