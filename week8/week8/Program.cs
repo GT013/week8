@@ -10,15 +10,22 @@ namespace week8
     {
         static void Main(string[] args)
         {
-            string i;
+            int i;
             Hashtable name = new Hashtable();
             Console.WriteLine("Enter id = ");
-            i = Console.ReadLine();
+            i = int.Parse(Console.ReadLine());
 
-            name.Add("60030049", "Nantikan Tippawan");
-            name.Add("60030007", "Kasina");
+            name.Add(60030049, "Nantikan Tippawan");
+            name.Add(60030007, "Kasina");
 
-           
+            foreach (int n in name)
+            {
+                
+                if (i == 60030049)
+                    Console.WriteLine(name[i]);
+                else if (i==60030007)
+                    Console.WriteLine(name[i]);
+            }
         }
     }
 }
