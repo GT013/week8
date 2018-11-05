@@ -16,9 +16,13 @@ namespace week8
             md1[1] = new string[] { "Jan", "Feb", "Mar", "April", "May", "June",
                 "July", "August", "Sep", "Oc", "November", "December" };
 
-            for (int i = 0; i < md1.GetLength(0); ++i)
+            for (int row=0;row<md1.Length;row++)
             {
-               
+               for(int col = 0;col<md1[row].Length;col++)
+                
+                    Console.Write(md1[row][col]+" ");
+                    Console.WriteLine();
+                
 
             }
 
