@@ -10,15 +10,25 @@ namespace week8
     {
         static void Main(string[] args)
         {
-
             Hashtable p = new Hashtable();
             p.Add("61110", "Uthaithani");
             p.Add("72000", "suphan");
-            p.Add("81000", "Kabee");
+            p.Add("81000", "Krabee");
+            p.Add("17000", "Chinat");
+            p.Add("71000", "Kanjanaburi");
+            p.Add("40000", "Konkan");
+            p.Add("2200", "Janthaburi");
+            p.Add("24000", "Chachoengsao");
+            p.Add("20000", "Chonburi");
 
-            Console.WriteLine("pls input num: ");
+            foreach (DictionaryEntry pp in p)
+            {
+                Console.WriteLine(pp.Key + "=" + pp.Value);
+            }
+            Console.WriteLine("==========Post Office=========");
+            Console.Write("PostOffice id =  ");
             Console.WriteLine("" + p.ContainsKey(Console.ReadLine()));
-            Console.ReadLine();
+ 
         }
     }
 }
