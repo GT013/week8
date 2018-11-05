@@ -17,14 +17,14 @@ namespace week8
 
             name.Add(60030049, "Nantikan Tippawan");
             name.Add(60030007, "Kasina");
-
+            name.Add(60030037, "Thanapol");
             foreach (int n in name.Keys)
             {
 
                 if (n == i)
                 
                     Console.WriteLine(name[60030049]); 
-                else if (n == i)
+                else if (i == n)
                     Console.WriteLine(name[60030007]);
                 
             }
