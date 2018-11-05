@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace week8
 {
@@ -10,34 +11,24 @@ namespace week8
     {
         static void Main(string[] args)
         {
-            int[,] multiplyTable = new int[12, 12];
-            for (int i = 0,j=1; i <= 12&&j<=12; i++,j++)
+            ArrayList list1 = new ArrayList();
+            list1.Add(1);
+            list1.Add(2);
+            list1.Add(3);
+            list1.Add(4);
+            list1.Add(5);
+            Console.WriteLine("======before======");
+            foreach (int n in list1)
             {
-                
-                
-                    multiplyTable[0, i] = j * 1;
-                    multiplyTable[1, i] = j * 2;
-                    multiplyTable[2, i] = j * 3;
-                    multiplyTable[3, i] = j * 4;
-                    multiplyTable[4, i] = j * 5;
-                    multiplyTable[5, i] = j * 6;
-                    multiplyTable[6, i] = j * 7;
-                    multiplyTable[7, i] = j * 8;
-                    multiplyTable[8, i] = j * 9;
-                    multiplyTable[9, i] = j * 10;
-                    multiplyTable[10, i] = j * 11;
-                    multiplyTable[11, i] = j * 12;
-                
+                Console.WriteLine(n);
             }
-            for (int row = 0; row < multiplyTable.GetLength(0); row++)
+            list1.RemoveAt(3);
+            Console.WriteLine("======After=======");
+            foreach(int n in list1)
             {
-                for (int col = 0; col < multiplyTable.GetLength(1); col++)
-                {
-                    Console.Write("{0,5}", multiplyTable[row, col]);
-                }
-                Console.WriteLine();
+                Console.WriteLine(n);
             }
-            Console.ReadLine();
+
         }
     }
 }
