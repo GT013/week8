@@ -23,7 +23,8 @@ namespace week8
                 Console.WriteLine(name[60030049]);
             else if (i == 60030007)
                 Console.WriteLine(name[60030007]);
-
+            else if (i == 60030037)
+                Console.WriteLine(name[60030037]);
 
         }
     }
