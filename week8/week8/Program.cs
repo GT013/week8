@@ -10,21 +10,31 @@ namespace week8
     {
         static void Main(string[] args)
         {
-            int i;
+           
             Hashtable name = new Hashtable();
-            Console.WriteLine("Enter id = ");
-            i = int.Parse(Console.ReadLine());
-
+           
             name.Add(60030049, "Nantikan Tippawan");
             name.Add(60030007, "Kasina");
             name.Add(60030037, "Thanapol");
+            name.Add(60030029, "Natthapat");
+            name.Add(60030014, "Jarudet");
+            name.Add(60030031, "Thanakamon");
+            name.Add(60030098, "Sittinon");
+            name.Add(60030015, "Jinnapat");
+            name.Add(60030112, "Avirut");
+            name.Add(60030016, "Jirawat");
+            name.Add(60030089, "Sarun");
+            name.Add(60030041, "Thanakorn");
 
-            if (i == 60030049)
-                Console.WriteLine(name[60030049]);
-            else if (i == 60030007)
-                Console.WriteLine(name[60030007]);
-            else if (i == 60030037)
-                Console.WriteLine(name[60030037]);
+
+            Console.WriteLine("---- Computer Class ----");
+            foreach (DictionaryEntry day in name)
+            {
+                Console.WriteLine(day.Key + "   -   " + day.Value);
+            }
+            Console.WriteLine("---------------ID Student-----------");
+
+            Console.WriteLine(" " + name.ContainsKey(Console.ReadLine()));
 
         }
     }
